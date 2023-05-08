@@ -34,10 +34,10 @@
 
         {% load static %}
         <img src="{% static 'shmoury_assets/shmoury_deepfried.png' %}" style="margin:1rem">
-        <p hidden>Psst...this isn't really a secure site. Good job being nosy! Here's your flag: [FLAG]</p>
+        <p hidden>Psst...this isn't really a secure site. Good job being nosy! Here's your flag: WEBCTF_Sniff_Sniff</p>
         
         {% if not correct_password %}
-        <h3>Congrats on the SQL injection!</h3> ALWAYS check inputs for SQL injection whenever the user input is used for SQL statements! Here's your flag: [FLAG]
+        <h3>Congrats on the SQL injection!</h3> ALWAYS check inputs for SQL injection whenever the user input is used for SQL statements! Here's your flag: WEBCTF_Insert_SQL_HERE_xD
         {% endif %}
     </body>
     <div class="footer">Bootstrap 4.0 theme taken from <b>https://getbootstrap.com/</b></div>
