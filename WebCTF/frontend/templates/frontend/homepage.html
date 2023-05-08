@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{% extends 'frontend/base.html' %}
+{% block content %}
+{% if logged_in %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style type ="text/css" >
+            .footer{ 
+                position: fixed;     
+                text-align: center;    
+                bottom: 0.5rem; 
+                width: 100%;
+            }  
+         </style>
+         
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1 style="margin:1rem">Welcome to the Shmoury College of Computer Science!</h1>
+        <h3 style="margin:1rem">Here at Shmoury, we are pioneers of security excellence.</h3>
+        <h6 style="margin:1rem">Welcome to our state-of-the-art website! Our site allows you to apply for scholarships, apply for TA positions, submit feedback, and more! For any questions about Shmoury or bugs, contact our main administrator Christo Wilson at <b>cbw@shmoury.edu</b>!</h6><br>
+
+        {% load static %}
+        <img src="{% static 'shmoury_assets/shmoury_deepfried.png' %}" style="margin:1rem">
+        <p hidden>Psst...this isn't really a secure site. Good job being nosy! Here's your flag: [FLAG]</p>
+        
+        {% if not correct_password %}
+        <h3>Congrats on the SQL injection!</h3> ALWAYS check inputs for SQL injection whenever the user input is used for SQL statements! Here's your flag: [FLAG]
+        {% endif %}
+    </body>
+    <div class="footer">Bootstrap 4.0 theme taken from <b>https://getbootstrap.com/</b></div>
+</html>
+{% else %}
+<p style="margin:1rem">You are not logged in</p>
+<a href="/login" style="margin:1rem">Log In</a>
+
+{% endif %}
+{% endblock %}
