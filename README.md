@@ -5,6 +5,7 @@ This is the repo for the Password Generation Project and the Shmoury Admin Vulne
 To run this project locally, follow the steps below:
 
 Navigate to the khouryadminsite folder in a terminal.
-Run python3 manage.py makemigrations.
-Run python3 manage.py migrate.
-Run python3 manage.py runserver. Your local instance of the site will be running on 127.0.0.1:8000
+**1. Run python3 manage.py makemigrations.
+2. Run python3 manage.py migrate.
+3. Run python3 manage.py runserver. Your local instance of the site will be running on 127.0.0.1:8000
+**
